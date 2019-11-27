@@ -1,0 +1,39 @@
+<div *ngIf="produit.description;else thenblock">
+    <h1 class="text-center mt-4">Produit : {{produit.nomProduit}}</h1>
+    <div class="row d-flex justify-content-center" >
+        <div class="col-md-5">
+            <img class="img-fluid mt-3 " src={{produit.img}} alt={{produit.nomProduit}} >
+        </div>
+
+        <div class="col-md-4 mt-4">
+            <h3 class="my-3"> Description </h3>
+            <p >
+                 Description : {{produit.description}}
+            </p>
+
+            <h4>Prix : {{produit.prix | currency:'TND '}}</h4>
+
+        </div>    
+    </div>
+    <button class="btn btn-outline-success ml-4 mt-4" (click)='ajouterAuPanier(produit)'>Buy Now</button>
+</div>
+
+
+<ng-template #thenblock>
+        <div>
+            <h1 class="text-center mt-4">Produit : {{produit.nomProduit}}</h1>
+            <div class="row d-flex justify-content-center" >
+                <div class="col-md-8">
+                    <img class="img-fluid mt-3 " src={{produit.img}} alt={{produit.nomProduit}} >
+                </div>
+            
+                <div class="col-md-4 mt-4">
+                    <h3 class="my-3"> Description </h3>
+                        <p>No description For This Product</p>
+                        <h5>Prix : {{produit.prix | currency:'TND '}}</h5>
+            
+                    </div>    
+                </div>
+                <button class="btn btn-outline-success ml-4 mt-4" (click)='ajouterAuPanier(produit)'>Buy Now</button>  
+        </div>
+</ng-template><br>

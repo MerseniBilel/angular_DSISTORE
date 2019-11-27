@@ -1,0 +1,11 @@
+<h1>Your Product list</h1>
+<div class="cart-item" *ngFor="let prod of panier">
+    <p>{{prod.nomProduit}}</p>
+    <p>{{prod.prix | currency:'TND'}}</p>
+
+</div>
+<div class="text-right">
+    <h4>Total : {{tot | currency: 'TND ' }}</h4>
+</div>
+<br>
+<button [routerLink]="['/livraison']" class="btn btn-outline-dark">Livraison</button>

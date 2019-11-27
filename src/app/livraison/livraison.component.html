@@ -1,0 +1,18 @@
+<div class="container-12">
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th >#</th>
+                    <th >TYPE</th>
+                    <th >PRIX</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let L of Liv | async">
+                    <td >#</td>
+                    <td>{{L.type}}</td>
+                    <td>{{L.prix}}</td>
+                  </tr>
+                </tbody>
+              </table>
+</div>
